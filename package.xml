@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package>
+    <name>Sparo_CharityProcessor</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/MIT">MITL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Allows registered Sparo merchants to make charitable donations on behalf of their customers</summary>
+    <description>Sparo's purpose is threefold. It allows everyone to do more good - more often - through their everyday purchases, provides merchants a way in which they can contribute to the causes that their customers care about,  all while advancing the good work that charities do for their community everyday.</description>
+    <notes>Use of this module requires a merchant account with Sparo, in addition to an active API Key.&#xD;
+&#xD;
+Find out more information:&#xD;
+&#xD;
+https://sparo.com/pages/merchant-about</notes>
+    <authors><author><name>Kyril Revels</name><user>krevels</user><email>kyril@developdc.com</email></author></authors>
+    <date>2015-02-25</date>
+    <time>22:11:25</time>
+    <contents><target name="magecommunity"><dir name="Sparo"><dir name="CharityProcessor"><dir name="Model"><file name="Observer.php" hash="bdd542e661bcf033c5917f1e9642e37e"/></dir><dir name="controllers"><file name="IndexController.php" hash="a1e56b2ee8d8d54321fa46170cb9208d"/></dir><dir name="etc"><file name="adminhtml.xml" hash="d9d7d2e16fc75a3ed21fb37d799e2d4a"/><file name="config.xml" hash="2b89ad6dc2e45c8a5bc1e79e791b469f"/><file name="system.xml" hash="4632c60b3f154d8fbf4a0d34b7b1f347"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Sparo_CharityProcessor.xml" hash="bb1747f5a072c75491ed3eeed5f7209e"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.3.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.5.0.0</min><max>1.9</max></package><package><name/><channel>connect.magentocommerce.com/core</channel><min/><max/></package><extension><name>curl</name><min/><max/></extension></required></dependencies>
+</package>
