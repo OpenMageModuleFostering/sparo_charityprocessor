@@ -1,7 +1,7 @@
 {
     "name": "OpenMageModuleFostering/Sparo_CharityProcessor",
     "type": "magento-module",
-    "license": "MITL",
+    "license": "MIT",
     "homepage": "",
     "description": "Allows registered Sparo merchants to make charitable donations on behalf of their customers",
     "authors": [

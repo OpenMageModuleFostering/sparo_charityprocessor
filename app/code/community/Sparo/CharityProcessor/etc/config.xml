@@ -10,7 +10,7 @@
     -->
     <Sparo_CharityProcessor>
       <!-- The version of our module, starting at 0.0.1 -->
-      <version>1.0.1</version>
+      <version>1.0.2</version>
     </Sparo_CharityProcessor>
   </modules>
   <global>
@@ -31,19 +31,20 @@
       </sparo_charityprocessor>
     </models>
     <events>
-      <checkout_type_onepage_save_order_after>
+      <sales_order_save_after>
         <observers>
-          <sparo_charityprocessor>
-            <class>sparo_charityprocessor/observer</class>
+          <sparo_charityprocessor_order_save_after>
+            <class>Sparo_CharityProcessor_Model_SaleObserver</class>
             <method>sendConfirmation</method>
             <type>singleton</type>
-          </sparo_charityprocessor>
+          </sparo_charityprocessor_order_save_after>
         </observers>
-      </checkout_type_onepage_save_order_after>
+      </sales_order_save_after>
     </events>
   </global>
   <frontend>
     <routers>
+      <!--
       <charityprocessor>
         <use>standard</use>
         <args>
@@ -51,6 +52,7 @@
           <frontName>charityprocessor</frontName>
         </args>
       </charityprocessor>
+      -->
     </routers>
   </frontend>
 </config>
