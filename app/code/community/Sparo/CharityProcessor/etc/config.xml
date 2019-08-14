@@ -10,7 +10,7 @@
     -->
     <Sparo_CharityProcessor>
       <!-- The version of our module, starting at 0.0.1 -->
-      <version>1.0.2</version>
+      <version>1.0.4</version>
     </Sparo_CharityProcessor>
   </modules>
   <global>
@@ -40,6 +40,15 @@
           </sparo_charityprocessor_order_save_after>
         </observers>
       </sales_order_save_after>
+      <admin_system_config_changed_section_sparoconfig>
+        <observers>
+          <sparo_admin_system_config_changed_section_sparoconfig>
+            <class>Sparo_CharityProcessor_Model_ConfigObserver</class>
+            <method>configSparoPlugin</method>
+            <type>singleton</type>
+          </sparo_admin_system_config_changed_section_sparoconfig>
+        </observers>
+      </admin_system_config_changed_section_sparoconfig>
     </events>
   </global>
   <frontend>

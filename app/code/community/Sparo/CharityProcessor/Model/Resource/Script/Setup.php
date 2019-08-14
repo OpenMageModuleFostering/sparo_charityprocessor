@@ -1,7 +1,7 @@
 <?php
 
 class Sparo_CharityProcessor_Model_Resource_Script_Setup extends Mage_Core_Model_Resource_Setup {
-  
+
   public function addScriptBlock(){
     Mage::app()->setCurrentStore(Mage_Core_Model_App::ADMIN_STORE_ID);
 
@@ -50,7 +50,6 @@ HTML;
       'stores' => array(0),
     );
 
-
     Mage::getModel('cms/block')->setData($containerBlock)->save();
   }
 
@@ -74,4 +73,58 @@ HTML;
 
   }
 
+  public function addSelectionBlock_1_0_3(){
+    Mage::app()->setCurrentStore(Mage_Core_Model_App::ADMIN_STORE_ID);
+
+    $block_name = 'sparo_charity_selection_block';
+    if( !$this->getBlockId($block_name) ){
+
+      $content = <<<HTML
+      <div style="display:{{config path="sparoconfig/sparoconfig_settings/sparo_activated"}}" id="sparo-mount"></div>
+      <script type="text/javascript" id="SPARO-lib" data-transaction-type="{{config path="sparoconfig/sparoconfig_settings/sparo_productionmode"}}" data-merchant="{{config path="sparoconfig/sparoconfig_account_detail/sparo_merchantid"}}" src="https://scripts.sparo.com/sparo.min.js"></script>
+HTML;
+
+      $scriptBlock = array(
+        'title' => 'Sparo Charity Selection Block',
+        'identifier' => $block_name,
+        'content' => $content,
+        'is_active' => 1,
+        'stores' => array(0),
+      );
+
+      Mage::getModel('cms/block')->setData($scriptBlock)->save();
+
+    }
+  }
+
+  public function deleteOldBlocks_1_0_3(){
+    Mage::getModel('cms/block')->unsetBlock('sparo_charity_selection_tags');
+    Mage::getModel('cms/block')->unsetBlock('sparo_widget_container');
+  }
+
+  public function addConfirmationBlock_1_0_3(){
+    Mage::app()->setCurrentStore(Mage_Core_Model_App::ADMIN_STORE_ID);
+
+    $block_name = 'sparo_charity_confirmation_block';
+    if( !$this->getBlockId($block_name) ){
+
+      $content = <<<HTML
+      <div style="display:{{config path="sparoconfig/sparoconfig_settings/sparo_activated"}}" id="sparo-mount"></div>
+      <script id="SPARO-lib" data-thank-you="true" data-size="large" data-merchant="{{config path="sparoconfig/sparoconfig_account_detail/sparo_merchantid"}}" src="https://scripts.sparo.com/sparo.min.js"></script>
+HTML;
+
+      $scriptBlock = array(
+        'title' => 'Sparo Charity Confirmation Block',
+        'identifier' => $block_name,
+        'content' => $content,
+        'is_active' => 1,
+        'stores' => array(0),
+      );
+
+      Mage::getModel('cms/block')->setData($scriptBlock)->save();
+
+    }
+  }
 }
+
+?>

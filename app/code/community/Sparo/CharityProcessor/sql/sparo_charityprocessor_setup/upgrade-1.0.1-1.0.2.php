@@ -7,3 +7,5 @@ $installer->startSetup();
 $installer->updateScriptBlock_1_0_2();
 
 $installer->endSetup();
+
+?>
