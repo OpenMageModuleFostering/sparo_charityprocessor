@@ -10,10 +10,21 @@
     -->
     <Sparo_CharityProcessor>
       <!-- The version of our module, starting at 0.0.1 -->
-      <version>0.0.1</version>
+      <version>1.0.1</version>
     </Sparo_CharityProcessor>
   </modules>
   <global>
+    <resources>
+      <sparo_charityprocessor_setup>
+        <setup>
+          <module>Sparo_CharityProcessor</module>
+          <class>Sparo_CharityProcessor_Model_Resource_Script_Setup</class>
+        </setup>
+        <connection>
+          <use>core_setup</use>
+        </connection>
+      </sparo_charityprocessor_setup>
+    </resources>
     <models>
       <sparo_charityprocessor>
         <class>Sparo_CharityProcessor_Model</class>
