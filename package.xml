@@ -1,2 +1,21 @@
 <?xml version="1.0"?>
-<package><name>Sparo_CharityProcessor</name><version>1.0.2</version><stability>stable</stability><license>MIT</license><channel>community</channel><extends></extends><summary>Allows registered Sparo merchants to make charitable donations on behalf of their customers</summary><description>Sparo's purpose is threefold. It allows everyone to do more good - more often - through their everyday purchases, provides merchants a way in which they can contribute to the causes that their customers care about,  all while advancing the good work that charities do for their community everyday.</description><notes>Removal of curl requirement.  Preventing double-notification to Sparo's servers</notes><authors><author><name>Kyril Revels</name><user>krevels</user><email>kyril@developdc.com</email></author></authors><date>2015-04-16</date><time>9:28:59</time><compatible></compatible><dependencies><required><php><min>5.3.0</min><max>6.0.0</max></php></required></dependencies><contents><target name="mage"><dir name="app"><dir name="etc"><dir name="modules"><file name="Sparo_CharityProcessor.xml" hash="3b6207ba3e2657bad87b2a6ea2ae6343"/></dir></dir><dir name="code"><dir name="community"><dir name="Sparo"><dir name="CharityProcessor"><dir name="etc"><file name="adminhtml.xml" hash="d9d7d2e16fc75a3ed21fb37d799e2d4a"/><file name="config.xml" hash="d0ef0cc70a4a49381a7446a8bb36dafc"/><file name="system.xml" hash="432f2375966dd01f5317013a2fa705a2"/></dir><dir name="controllers"><file name="IndexController.php" hash="ad0d9deb21fd29504258288765426691"/></dir><dir name="Model"><file name="Environments.php" hash="9e84c98ca7e2b798db172b050611329c"/><file name="SaleObserver.php" hash="68124748cf0ebc3417f7271682dc3666"/><dir name="Resource"><dir name="Script"><file name="Setup.php" hash="f00dc26fea5e19f8939a2d696cef07bd"/></dir></dir></dir><dir name="sql"><dir name="sparo_charityprocessor_setup"><file name="install-1.0.1.php" hash="5ecb0bfa51900ecbc56a2173cf048a97"/><file name="install-1.0.2.php" hash="38478931517fcd45fff695fb2bafadc8"/><file name="upgrade-1.0.1-1.0.2.php" hash="156d4107844816e516d7e1f89878c810"/></dir></dir></dir></dir></dir></dir></dir></target></contents></package>
+<package>
+    <name>Sparo_CharityProcessor</name>
+    <version>1.0.3</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/MIT">MITL</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Allows registered Sparo merchants to make charitable donations on behalf of their customers</summary>
+    <description>Sparo's purpose is threefold. It allows everyone to do more good - more often - through their everyday purchases, provides merchants a way in which they can contribute to the causes that their customers care about,  all while advancing the good work that charities do for their community everyday.</description>
+    <notes>Use of this module requires a merchant account with Sparo, in addition to an active API Key.&#xD;
+&#xD;
+Find out more information:&#xD;
+https://sparo.com/pages/merchant-about</notes>
+    <authors><author><name>Kyril Revels</name><user>krevels</user><email>kyril@developdc.com</email></author></authors>
+    <date>2015-06-18</date>
+    <time>17:37:00</time>
+    <contents><target name="magecommunity"><dir name="Sparo"><dir name="CharityProcessor"><dir name="Model"><file name="Environments.php" hash="9e84c98ca7e2b798db172b050611329c"/><dir name="Resource"><dir name="Script"><file name="Setup.php" hash="f00dc26fea5e19f8939a2d696cef07bd"/></dir></dir><file name="SaleObserver.php" hash="68124748cf0ebc3417f7271682dc3666"/></dir><dir name="controllers"><file name="IndexController.php" hash="ad0d9deb21fd29504258288765426691"/></dir><dir name="etc"><file name="adminhtml.xml" hash="d9d7d2e16fc75a3ed21fb37d799e2d4a"/><file name="config.xml" hash="d0ef0cc70a4a49381a7446a8bb36dafc"/><file name="system.xml" hash="432f2375966dd01f5317013a2fa705a2"/></dir><dir name="sql"><dir name="sparo_charityprocessor_setup"><file name="install-1.0.1.php" hash="5ecb0bfa51900ecbc56a2173cf048a97"/><file name="install-1.0.2.php" hash="38478931517fcd45fff695fb2bafadc8"/><file name="upgrade-1.0.1-1.0.2.php" hash="156d4107844816e516d7e1f89878c810"/></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Sparo_CharityProcessor.xml" hash="3b6207ba3e2657bad87b2a6ea2ae6343"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.3.0</min><max>6.0.0</max></php></required></dependencies>
+</package>
